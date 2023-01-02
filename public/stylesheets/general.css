@@ -5,6 +5,7 @@
 body{
     font-family: var(--tipografia);
     font-size: var(--cuerposDeTexto);
+    background-color: var(--colorGrisClaro);
 }
 a{
     text-decoration: none;
