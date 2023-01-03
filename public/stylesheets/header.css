@@ -1,15 +1,31 @@
 .header{
     background-color: var(--colorAmarillo);
     padding: 10px;
+    display: flex;
+    flex-wrap: wrap;
 }
 .header__logo{
     width: 50%;
 }
 .header__barra-de-busqueda{
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    padding-left: 7vw;
+    width: 50%;
+    position: relative;
+}
+.header__barra-de-busqueda input{
+    width: 100%;
+    padding: 5px;
+    border: none;
+    border-radius: 5px;
+    padding-right: 30px;
+}
+.header__barra-de-busqueda button{
+    position: absolute;
+    top: 2px;
+    right: 0;
+    border: none;
+    background-color: white;
+    border-left: 1px solid var(--colorGrisOscuro);
+    color: var(--colorGrisOscuro);
 }
 .header__barra-de-busqueda-boton{
     display: flex;
@@ -41,6 +57,9 @@
 }
 .header__nav{
     display: none;
+}
+.header__banner img{
+        width: 100vw;
 }
 
 @media (min-width:361px){
