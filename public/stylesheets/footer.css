@@ -1,9 +1,11 @@
 .footer-texto{
     display:flex;
     flex-direction: column;
-    padding: 10vw;
+    justify-content: space-between;
     text-align: center;
-    color: var(--colorGrisOscuro)
+    color: var(--colorGrisOscuro);
+    margin: 20px 0;
+    gap: 8px;
 }
 .footer-texto-subtitulo{
     font-size: 17px;
@@ -13,4 +15,27 @@
     font-size: 2em;
     margin-bottom: 10px; 
     color: var(--colorCeleste);
+}
+
+@media (min-width:769px){
+
+.footer-text{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-top: 50px;
+    align-items: center;
+    justify-content: space-around;
+}
+.footer-text figure{
+    width: 30%;
+    
+}
+.footer-text article{
+    width: 100%;
+}
+.footer-text i:hover{
+    color: var(--colorAzul);
+}
 }

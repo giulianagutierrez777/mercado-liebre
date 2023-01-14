@@ -1,38 +1,63 @@
-.main{
+.home__main {
+    width: 100%;
+    background-color: var(--colorGrisClaro);
+}
+
+.home__main__section {
     width: 90%;
     margin: 0 auto;
+    padding: 10px 0;
+    background-color: var(--colorGrisClaro);
 }
-.main__section{
+
+.titulares {
+    width: 100%;
+    margin: 10px 0;
+}
+
+.home__main__section__productos--ultimavista {
     display: flex;
+    flex-direction: column;
+    gap: 10px;
     flex-wrap: wrap;
 }
-.titulares{
+
+.home__main__section__productos--ultimavista figure {
+    width: 100%;
+    background-color: white;
+}
+
+.home__main__section__productos--ultimavista img {
     width: 100%;
 }
-.main__producto-visto{
-    background-color: #fff;
-    margin-bottom: 10px;
+
+.home__main__section__productos--ofertas {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    flex-wrap: wrap;
 }
-.main__producto-visto img{
+
+.home__main__section__productos--ofertas figure {
+    width: 100%;
+    background-color: white;
+}
+
+.home__main__section__productos--ofertas img {
     width: 100%;
 }
-.main__producto-oferta{
-    background-color: #fff;
-    margin-bottom: 10px;
-}
-.main__producto-oferta img{
-    width: 100%;
-}
+
 .main__producto-info{
     display:flex;
     border-top: 1px solid var(--colorGrisClaro);
     align-items: flex-end;
+    padding: 15px;
 }
 .main__producto-info .precios{
     width: 30%;
 }
 .main__producto-info .descuentos{
-    width: 70%;
+    width: 30%;
     font-size: 1.0rem;
 }
 .main__producto-icono{
@@ -52,41 +77,102 @@
     position: absolute;
     right: 20px;
     top: -15px;
+    transition: 1s;
 }
+.main__producto-icono i:hover{
+    transform: rotate(-90deg);
+}
+
 .descuentos{
     color: var(--colorVerde);
+    padding: 2px;
 }
-.descripciones{
+.main__producto-info .descripciones{
     color: var(--colorGrisOscuro);
     font-weight: 300;
-    margin-top: 30px;
-    display: none;
+    margin: 0;
+    height: 0px;
+    width: 100%;
+    transition: all 1s;
+    overflow: hidden;
 }
+.main__producto-info:hover .descripciones{
+    height: 50px;
+    margin-top: 30px;
+} 
+
+.main__producto-price{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.main__producto-info{
+    display: block;
+}
+
+
+.main__producto-visto:hover{
+    box-shadow: 0px 0px 10px rgb(100 100 100);
+}
+.main__producto-oferta:hover{
+    box-shadow: 0px 0px 10px rgb(100 100 100);
+}
+
 
 @media (min-width:361px){
-    .descripciones{
-        display: block;
+    
+    .home__main__section__productos--ultimavista {
+        flex-direction: row;
+        justify-content: space-between;
+        position: relative;
     }
-    .main__producto-visto{
-        box-shadow: 0px 0px 10px rgb(100 100 100);
+    .home__main__section__productos--ultimavista figure {
+        width: 45%;
+        flex-wrap: wrap;
     }
-    .main__producto-oferta{
-        box-shadow: 0px 0px 10px rgb(100 100 100);
-    }
-    .main__section{
-        width: 46%;
+    
+    .home__main__section__productos--ofertas {
+        flex-direction: row;
         justify-content: space-between;
     }
-    .main__producto-info{
+    .home__main__section__productos--ofertas figure {
+        width: 45%;
+        flex-wrap: wrap;
+    }
+    .main__producto-price{
         display: block;
     }
+    }
+    
 
     
-}
 
 @media (min-width:769px){
-    .main__section{
-        width: 24%;
+    
+    .home__main__section__productos--ultimavista {
+        flex-direction: row;
         justify-content: space-between;
     }
+    .home__main__section__productos--ultimavista figure {
+        width: 20%;
+        flex-wrap: wrap;
+    }
+    .home__main__section__productos--ofertas {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .home__main__section__productos--ofertas figure {
+        width: 20%;
+        flex-wrap: wrap;
+    }
+    .main__producto-price{
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 15px;
+    }
+    
+    
+    
 }

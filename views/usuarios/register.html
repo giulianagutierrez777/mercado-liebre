@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mercado Liebre | Login</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/stylesheets/styles.css">
+    <script src="https://kit.fontawesome.com/4f3cb4e973.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+    <header class="header">
+
+        <figure class="header__logo">
+        <img src="/images/logo-mercado-liebre.svg">
+        </figure>
+
+        <figure class="header__barra-de-busqueda">
+            <div class="header__barra-de-busqueda-box">
+                <input type="text" placeholder="Buscar productos, marcas">
+            
+                <button><i class="fa-solid fa-magnifying-glass"></i></button>
+            </div>
+        </figure>
+
+        <figure class="header__texto">
+                <i class="fa-solid fa-hand-holding-dollar"></i>
+                <p>Comprá en cuotas y sin tarjeta de crédito</p>
+        </figure>
+
+
+            <figure class="header__nav">
+                <section class="header__nav__section">
+                    <ul class="header__nav__section-uno">
+                        <li><a href="">Ofertas</a></li>
+                        <li><a href="">Tiendas Oficiales</a></li>
+                        <li><a href="">Vender</a></li>
+                        <li><a href="">Ayuda</a></li>
+                    </ul>
+                </section>
+                <section class="header__nav__section">
+                    <ul class="header__nav__section-dos">
+                        <li><a href="/register">Creá tu cuenta </a><i class="fa-regular fa-id-card"></i></li>
+                        <li><a href="/login">Ingresá </a><i class="fa-sharp fa-solid fa-right-to-bracket"></i></li>
+                        <li><a href="">Mis compras </a><i class="fa-solid fa-basket-shopping"></i></li>
+                    </ul>
+                </section>
+            </figure>
+
+            <figure class="header__burger-menu">
+                <button>
+                    <i class="fas fa-bars"></i>
+                </button>
+            </figure> 
+    </header>
+
+
+    <main class="login__main">
+
+        <div class="login__form-box">
+        <form class="login__form" method="POST">
+        
+            <div class="login__form__part-one">
+            <h4 class="login__text">Crea tu cuenta</h4>
+            <input type="text" name="name" placeholder="Nombre y apellido">
+            <input type="text" name="username" placeholder="Nombre de usuario">
+            <input type="email" name="email" placeholder="E-mail">
+            <p>Fecha de nacimiento</p>
+            <input type="date" name="birthday" placeholder="Fecha de Nacimiento">
+            <p>Donde vives?</p>
+            <select name="provincia" id="provincia">
+                <option value="" selected hidden>Seleccione su provincia</option>
+                <option value="Neuquen">Neuquen</option>
+                <option value="Rio Negro">Rio Negro</option>
+                <option value="Buenos Aires">Buenos Aires</option>
+                <option value="Mendoza">Mendoza</option>
+                <option value="Jujuy">Jujuy</option>
+                <option value="Salta">Salta</option>
+            </select>
+            <select name="ciudad" id="ciudad">
+                <option value="" selected hidden>Seleccione su ciudad</option>
+                <option value="ejemplo1">ejemplo1</option>
+                <option value="ejemplo2">ejemplo2</option>
+                <option value="ejemplo3">ejemplo3</option>
+                <option value="ejemplo4">ejemplo4</option>
+                <option value="ejemplo5">ejemplo5</option>
+            </select>
+
+            <input type="text" name="adress" placeholder="Domicilio">
+
+            <input type="password" name="contraseña" placeholder="Contraseña">
+            </div>
+
+            <p>Que hará en ésta plataforma?</p>
+
+            <div class="radio">
+            <input type="radio" name="tipo-usuario" id="vender">
+            <label for="vender">Vender</label>
+            <input type="radio" name="tipo-usuario" id="comprar">
+            <label for="comprar">Comprar</label>
+            </div>
+
+            <div class="checkbox">
+            <p>Selecciona las categorias de tu interes</p>
+            <input type="checkbox" name="interes" id="electro">
+            <label for="electro">Electro</label>
+            <input type="checkbox" name="interes" id="moda">
+            <label for="moda">Moda</label>
+            <input type="checkbox" name="interes" id="hogar">
+            <label for="hogar">Hogar</label>
+            <input type="checkbox" name="interes" id="jugueteria">
+            <label for="jugueteria">Jugueteria</label>
+            <input type="checkbox" name="interes" id="vida-sana">
+            <label for="vida-sana">Vida sana</label>
+            </div>
+
+            <button class="send">Enviar</button>
+        </div>
+        
+        </form>
+    </main>
